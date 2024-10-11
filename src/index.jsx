@@ -1,7 +1,12 @@
 import React from 'react';
-
+import Comp  from './comp/comp';
 const HolaMundo = () => {
-  return <h1>Hola, Mundo!</h1>;
+  return 
+  <>
+  <Comp>
+    <h1>Hola, Martes!</h1>
+    </Comp>
+  </>;
 };
 
 export default HolaMundo;
