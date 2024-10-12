@@ -7,14 +7,14 @@ def create_package_json(path,repo_name,target_path=".repo_deploy"):
 
     package_json = json.load(open(path))
     package_json["name"] = repo_name
-    package_json["main"] = "dist/index.js"
+    package_json["main"] = "index.js"
     if "private" in package_json.keys():
         del package_json["private"]
 
     package_json["scripts"] = {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir .",
-    "start": "node dist/index.js"
+    "start": "node index.js"
     }
     package_json["author"] = "Deyviss Jesus Oroya Villalta"
     package_json["license"] = "MIT"
