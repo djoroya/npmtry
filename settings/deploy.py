@@ -13,7 +13,7 @@ def create_package_json(path,repo_name,target_path=".repo_deploy"):
 
     package_json["scripts"] = {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir .",
     "start": "node dist/index.js"
     }
     package_json["author"] = "Deyviss Jesus Oroya Villalta"
@@ -60,6 +60,8 @@ else:
 
 # for file in copyfiles:
 #     shutil.copy(file, os.path.join(".repo_deploy", file))
+
+
 
 create_package_json("package.json",name)
 
