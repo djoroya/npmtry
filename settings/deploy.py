@@ -95,5 +95,9 @@ shutil.copytree(os.path.join("src","dependencies"),
 os.chdir('.repo_deploy')
 os.system("pwd")
 os.system('npm install react react-dom --save-peer')
-os.system('npm install @babel/preset-env @babel/cli @babel/core --save-dev')
+babel_dev = ["@babel/preset-react", 
+             "@babel/preset-env", 
+             "@babel/cli", 
+             "@babel/core"]
+os.system('npm install ' + ' '.join(babel_dev) + ' --save-dev')
 os.system('npm run build')
