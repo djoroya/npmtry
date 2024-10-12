@@ -1,10 +1,18 @@
 import React from 'react';
 
-const Comp = ({children}) => {
+export const Comp = ({children}) => {
   return (<>
   <h1>Hola, Mundo!</h1>
     {children}
   </>);
 };
 
-export default Comp;
+export const HolaMundo = () => {
+  return (
+  <>
+  <Comp>
+    <h1>Hola, Martes!</h1>
+    </Comp>
+  </>
+  )
+};
